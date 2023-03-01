@@ -17,5 +17,5 @@ write.table(StudentAverage, "Students_Gendered_Mean")
 
 i_students <- subset(Student, grepl("i", Student$Name, ignore.case=T))
 #Step 3
-write.table(i_students, "SubsetMeans", sep=",")
+write.table(i_students, "SubsetMeans.csv", sep=",")
 
