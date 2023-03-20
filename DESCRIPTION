@@ -1,0 +1,12 @@
+Package: Module10Package
+Title: Module 10
+Version: 0.1.0
+Authors@R: 
+    person("Jahnae", "Edwards", , "Jahnae@usf.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This sample package was created for module 10s assignment.
+License: CC0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+
