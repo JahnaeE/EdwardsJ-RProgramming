@@ -1,0 +1,42 @@
+---
+title: "Module 12"
+author: "Jahnae Edwards"
+date: "2023-03-27"
+output: html_document
+---
+
+### Install packages
+
+Load all necessary packages here 
+
+```{r setup}
+library(GGally)
+library(network)
+library(sna)
+library(ggplot2)
+library(plotly)
+```
+
+### Random Sample
+
+Create a random sample of data to create the Social network analysis
+
+```{r, random}
+net <- rgraph(25, mode = "graph", tprob = 0.5)
+net <- network(net, directed = FALSE)
+```
+
+### Plot the data
+
+```{r}
+
+net %v% "phono" = ifelse(letters[1:10] %in% c("a", "e", "i"), "vowel", "consonant")
+net %v% "color" = ifelse(net %v% "phono" == "vowel", "hotpink", "black")
+
+p <- ggnet2(net, color = "color", size = 4) + ggtitle("Vowel or Consonant")
+
+ggplotly(p)
+
+```
+
+
